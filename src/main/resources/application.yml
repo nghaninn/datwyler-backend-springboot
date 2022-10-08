@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: com.nghaninn.datwyler
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  security:
+    oauth2:
+      resourceserver:
+  jwt:
+    issuer-uri: https://securetoken.google.com/datwyler-ass
+    jwk-set-uri: https://www.googleapis.com/robot/v1/metadata/jwk/securetoken@system.gserviceaccount.com
+  h2:
+    console:
+      enabled: true
+
+jwt:
+  secret: aCnCHxgF/sL7yxsvNxmqRk7H2Vm0xG5Hu9rfRhzfUKg=
