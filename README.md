@@ -65,3 +65,8 @@ password: password
 
 [![Datwyler React Frontend](https://yt-embed.herokuapp.com/embed?v=Vkqig6y2auw)](https://www.youtube.com/embed/Vkqig6y2auw "Datwyler React Frontend")  
 [![Datwyler RestAPI](https://yt-embed.herokuapp.com/embed?v=VetMJD9YyvU)](https://www.youtube.com/watch?v=VetMJD9YyvU "Datwyler RestAPI")  
+
+----
+
+# Other works
+[Other Assignment](https://github.com/nghaninn/nghaninn/blob/main/projects/README.md)
