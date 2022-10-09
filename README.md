@@ -59,5 +59,9 @@ password: password
 ## Unable to accomplished
 
 >1. Account creation, use default account listed above.
+>2. Decimal errors
 
 ----
+
+[![Datwyler React Frontend](https://yt-embed.herokuapp.com/embed?v=Vkqig6y2auw)](https://www.youtube.com/embed/Vkqig6y2auw "Datwyler React Frontend")  
+[![Datwyler RestAPI](https://yt-embed.herokuapp.com/embed?v=VetMJD9YyvU)](https://www.youtube.com/watch?v=VetMJD9YyvU "Datwyler RestAPI")  
