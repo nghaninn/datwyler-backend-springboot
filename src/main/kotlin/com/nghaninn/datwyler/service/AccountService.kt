@@ -32,7 +32,7 @@ class AccountService (
         return if (accountResult.isPresent) {
             accountResult.get().let {
                 AccountDTO(it.id, it.applicant!!.id!!, it.loans!!
-                    .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, it.id!!) }
+                    .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, loan.type, it.id!!) }
                 )
             }
         } else {
@@ -47,7 +47,7 @@ class AccountService (
             applicantResult.get().let {
                 it.accounts!!.map { acc ->
                     AccountDTO(acc.id, it.id!!, acc.loans!!
-                        .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, acc.id!!) }
+                        .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, loan.type, acc.id!!) }
                     )
                 }
             }

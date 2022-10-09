@@ -26,7 +26,7 @@ class ApplicantService (
                 ApplicantDTO(it.id, it.name, it.accounts!!
                     .map {acc ->
                         AccountDTO(acc.id!!, it.id!!, acc.loans!!
-                            .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, acc.id!!) }
+                            .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, loan.type, acc.id!!) }
                         )
                     })
             }
@@ -43,7 +43,7 @@ class ApplicantService (
                 ApplicantDTO(it.id, it.name, it.accounts!!
                     .map {acc ->
                         AccountDTO(acc.id!!, it.id!!, acc.loans!!
-                            .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, acc.id!!) }
+                            .map{ loan -> LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, loan.type, acc.id!!) }
                         )
                     })
             }

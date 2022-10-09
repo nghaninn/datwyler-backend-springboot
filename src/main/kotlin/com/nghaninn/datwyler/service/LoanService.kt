@@ -20,7 +20,7 @@ class LoanService (
             val account = accountResult.get()
             if (account.applicant!!.id == applicantID) {
                 val loanEntity:Loan = loanDTO.let {
-                    Loan(null, it!!.amount, it!!.start, it!!.durationDays, account)
+                    Loan(null, it!!.amount, it!!.start, it!!.durationDays, it.type!!, account)
                 }
 
                 loanRepository.save(loanEntity)
@@ -35,7 +35,7 @@ class LoanService (
 
         return if (loanResult.isPresent) {
             loanResult.get().let {
-                LoanDTO(it.id, it.amount, it.start, it.durationDays, it.account!!.id!!)
+                LoanDTO(it.id, it.amount, it.start, it.durationDays, it.type, it.account!!.id!!)
             }
         } else {
             throw Exception("Loan does not exist")
@@ -48,7 +48,7 @@ class LoanService (
         return if (accountResult.isPresent) {
             accountResult.get().let {
                 it.loans!!.map { loan ->
-                    LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, it.id!!)
+                    LoanDTO(loan.id, loan.amount, loan.start, loan.durationDays, loan.type, it.id!!)
                 }
             }
         } else {
